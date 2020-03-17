@@ -1,0 +1,6 @@
+---
+- hosts:
+    - wap
+  roles:
+    - nginx-wap
+

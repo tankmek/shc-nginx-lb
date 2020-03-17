@@ -1,0 +1,6 @@
+[all:vars]
+ansible_user=naruto
+
+[wap]
+webproxy ansible_host=192.168.4.46
+

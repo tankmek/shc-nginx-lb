@@ -1,0 +1,14 @@
+---
+# handlers file for nginx-wap
+- block:
+    - name: restart nginx
+      systemd:
+        name: nginx.service
+        state: restarted
+
+    - name: reload nginx
+      systemd:
+        name: nginx.service
+        state: reloaded
+  become: true
+
