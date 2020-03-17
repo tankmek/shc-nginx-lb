@@ -1,9 +1,10 @@
 # nginx-wap
+
 Reverse TLS proxy designed for use in front of a splunk search
 head cluster. Uses HSTS and the ip_hash load balancing discipline.
 
 ## Prerequisites
-=============
+
 `policycoreutils-python`
 `openssl`
 `cryptography (pip)`
