@@ -31,3 +31,9 @@ roles/
 └── main.yml
 ```
 
+## Usage
+```
+anisble all -m ping
+
+ansible-playbook site.yml
+```

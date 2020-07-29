@@ -2,5 +2,5 @@
 ansible_user=naruto
 
 [wap]
-webproxy ansible_host=192.168.4.46
+webproxy ansible_host=192.168.28.77
 
