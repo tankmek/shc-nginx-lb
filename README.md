@@ -5,9 +5,9 @@ Head Cluster (SHC). Uses HSTS and the ip_hash load balancing discipline.
 
 ## Prerequisites
 
-`policycoreutils-python`
-`openssl`
-`cryptography (pip)`
+`policycoreutils-python`  
+`openssl`  
+`cryptography (pip)`  
 
 
 ```
