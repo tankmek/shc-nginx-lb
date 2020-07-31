@@ -1,6 +1,7 @@
 [all:vars]
 ansible_user=naruto
 
-[wap]
-webproxy ansible_host=192.168.28.77
+[lb]
+loadbalancer ansible_host=172.16.71.132
+
 

@@ -1,6 +1,6 @@
 ---
 # Author: Michael Edie (@tankmek)
 # -----------------
-- import_playbook: playbooks/config-wap.yml
+- import_playbook: playbooks/config-lb.yml
 ...
 

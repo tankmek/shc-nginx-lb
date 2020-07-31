@@ -1,4 +1,4 @@
-# nginx-wap
+# shc-nginx-loadbalancer
 
 Reverse TLS proxy designed for use in front of a splunk search
 head cluster. Uses HSTS and the ip_hash load balancing discipline.
@@ -12,7 +12,7 @@ head cluster. Uses HSTS and the ip_hash load balancing discipline.
 
 ```
 roles/
-└── nginx-wap
+└── nginx-lb
 ├── files
 │   └── default.conf
 ├── handlers

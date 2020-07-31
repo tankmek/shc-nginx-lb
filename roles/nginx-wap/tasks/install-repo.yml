@@ -1,7 +1,0 @@
----
-- name: ensure epel repo is installed
-  yum:
-    name: 
-      - epel-release
-    state: present
-
