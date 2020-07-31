@@ -1,0 +1,37 @@
+---
+- name: ensure openssl dependencies are present
+  yum:
+    name: 
+      - openssl
+      - python-pip
+      - python-setuptools
+    state: latest
+
+- name: pyOpenSSL deprecated installing 'cryptography' via pip
+  pip:
+    name: cryptography
+
+- name: create ssl directory
+  file:
+    path: "{{ lb.tls_dir }}"
+    state: directory
+    mode: 0755
+
+- name: generate private key
+  openssl_privatekey:
+    path: "{{ lb.tls_dir }}/{{ lb.tls_privkey }}"
+
+- name: generate CSR
+  openssl_csr:
+    path: "{{ lb.tls_dir }}/{{ lb.tls_csr }}"
+    privatekey_path: "{{ lb.tls_dir }}/{{ lb.tls_privkey }}"
+    common_name: devops.fakelabs.io
+    country_name: US
+    organization_name: fakelabs
+
+- name: generate self-signed certificate
+  openssl_certificate:
+    path: "{{ lb.tls_dir }}/{{ lb.tls_certificate }}"
+    csr_path: "{{ lb.tls_dir }}/{{ lb.tls_csr }}"
+    privatekey_path: "{{ lb.tls_dir }}/{{ lb.tls_privkey }}"
+    provider: selfsigned

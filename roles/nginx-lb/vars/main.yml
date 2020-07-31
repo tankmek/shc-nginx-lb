@@ -1,0 +1,13 @@
+---
+# vars file for nginx-lb
+vhosts:
+  - name: siem
+    srv_ip0: 10.15.100.50
+    srv_ip1: 10.15.100.51
+    srv_ip2: 10.15.100.52
+    srv_port: 8000
+    srv_fqdn: siem.fakelabs.io
+    ssl_port: 443
+    listen_port: 80
+    tls_certificate_path: /etc/nginx/ssl/lb-cert.crt
+    tls_certprivkey_path: /etc/nginx/ssl/lb-priv.key

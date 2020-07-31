@@ -1,0 +1,24 @@
+---
+# Web Access port
+- name: ensure firewalld service is running
+  systemd:
+    name: firewalld
+    state: started
+
+- name: ensure web access port is open
+  firewalld:
+    port: "{{ lb.web_port }}/tcp"
+    permanent: yes
+    immediate: yes
+    state: enabled
+  tags:
+    - firewall
+
+- name: ensure ssl access port is open
+  firewalld:
+    port: "{{ lb.ssl_port }}/tcp"
+    permanent: yes
+    immediate: yes
+    state: enabled
+  tags:
+    - firewall
