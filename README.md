@@ -1,7 +1,7 @@
 # shc-nginx-loadbalancer
 
-Reverse TLS proxy designed for use in front of a splunk search
-head cluster. Uses HSTS and the ip_hash load balancing discipline.
+TLS load balancer designed for use in front of a Splunk Search
+Head Cluster (SHC). Uses HSTS and the ip_hash load balancing discipline.
 
 ## Prerequisites
 
