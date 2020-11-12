@@ -9,7 +9,9 @@ Head Cluster (SHC). Uses HSTS and the ip_hash load balancing discipline.
 `openssl`  
 `cryptography (pip)`  
 
-Assumes RedHat OS family
+- Assumes RedHat OS family
+- User with SSH Key Authentication enabled and Sudoer
+
 ## Group Variables
 ```
   ---
